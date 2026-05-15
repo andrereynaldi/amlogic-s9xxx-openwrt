@@ -85,7 +85,7 @@ firmware_repo="https://github.com/ophub/firmware"
 script_repo="https://github.com/ophub/luci-app-amlogic"
 
 # Set the kernel download repository
-kernel_repo="https://github.com/ophub/Kernel-"
+kernel_repo="https://github.com/andrereynadli/Kernel-"
 # Set the kernel tags (kernel_xxx) that can be overridden via the [ -u ] parameter
 default_tags="stable"
 kernel_usage=""
@@ -1219,14 +1219,14 @@ EOF
     )
 
     # Add firmware version information to the terminal banner
-    [[ -n "${builder_name}" ]] && builder_display="Builder Name: ${builder_name} | " || builder_display=""
-    [[ -f "etc/banner" ]] && {
-        echo " Install OpenWrt: System → Amlogic Service → Install OpenWrt" >>etc/banner
-        echo " Update  OpenWrt: System → Amlogic Service → Online  Update" >>etc/banner
-        echo " Board: ${board} | OpenWrt Kernel: ${kernel_name}" >>etc/banner
-        echo " ${builder_display}Production Date: $(date +%Y-%m-%d)" >>etc/banner
-        echo "───────────────────────────────────────────────────────────────────────" >>etc/banner
-    }
+#    [[ -n "${builder_name}" ]] && builder_display="Builder Name: ${builder_name} | " || builder_display=""
+#    [[ -f "etc/banner" ]] && {
+#        echo " Install OpenWrt: System → Amlogic Service → Install OpenWrt" >>etc/banner
+#        echo " Update  OpenWrt: System → Amlogic Service → Online  Update" >>etc/banner
+#        echo " Board: ${board} | OpenWrt Kernel: ${kernel_name}" >>etc/banner
+#        echo " ${builder_display}Production Date: $(date +%Y-%m-%d)" >>etc/banner
+#        echo "───────────────────────────────────────────────────────────────────────" >>etc/banner
+#    }
 
     # Add firmware information
     release_lines=(
